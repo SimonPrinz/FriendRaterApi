@@ -15,8 +15,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Core\Security;
-use Throwable;
-use function Symfony\Component\VarDumper\Dumper\esc;
 
 class AuthenticationController extends AbstractController
 {
@@ -25,7 +23,12 @@ class AuthenticationController extends AbstractController
      */
     public function login(Security $security): Response
     {
-        return $this->json($security->isGranted('ROLE_USER'));
+        /** @var User $user */
+        $user = $security->getUser();
+
+        return $this->json([
+            'name' => $user->getFirstname(),
+        ]);
     }
 
     /**

@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c341b0b-5abb-46f9-a0a9-baef17568126" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AuthenticationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AuthenticationController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +128,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
@@ -136,6 +136,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Controller" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/DBAL/Types" />
       <recent name="$PROJECT_DIR$/src/Repository" />
@@ -154,7 +155,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603074328708</updated>
       <workItem from="1603074330205" duration="343000" />
-      <workItem from="1603074685915" duration="17091000" />
+      <workItem from="1603074685915" duration="19479000" />
     </task>
     <servers />
   </component>
@@ -162,10 +163,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="275" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603157735779">
+    <state x="560" y="275" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603163938865">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="560" y="275" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603157735779" />
+    <state x="560" y="275" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603163938865" />
     <state x="765" y="298" key="#com.intellij.ide.util.MemberChooser" timestamp="1603159743060">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
@@ -174,18 +175,18 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="729" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603160669418" />
-    <state x="694" y="342" key="NewPhpClassDialog" timestamp="1603159712068">
+    <state x="694" y="342" key="NewPhpClassDialog" timestamp="1603163721911">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="694" y="342" key="NewPhpClassDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603159712068" />
+    <state x="694" y="342" key="NewPhpClassDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603163721911" />
     <state x="469" y="248" key="SettingsEditor" timestamp="1603074663158">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="469" y="248" key="SettingsEditor/0.25.1920.1175@0.25.1920.1175" timestamp="1603074663158" />
-    <state x="560" y="349" key="Vcs.Push.Dialog.v2" timestamp="1603161865780">
+    <state x="560" y="349" key="Vcs.Push.Dialog.v2" timestamp="1603163281257">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="560" y="349" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1603161865780" />
+    <state x="560" y="349" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1603163281257" />
     <state x="826" y="446" width="342" height="332" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1603076295280">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
