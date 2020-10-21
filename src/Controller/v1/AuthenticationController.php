@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\v1;
 
 use App\Entity\User;
 use App\Form\Register;
@@ -19,12 +19,15 @@ use Symfony\Component\Security\Core\Security;
 class AuthenticationController extends AbstractController
 {
     /**
-     * @Route("/login", methods={"GET"})
+     * @Route("/v1/login", methods={"GET"}, name="app_v1_login")
      */
     public function login(Security $security): Response
     {
         /** @var User $user */
         $user = $security->getUser();
+        if ($user == null) {
+            throw new ApiException([new Exception('login is required')], 401);
+        }
 
         return $this->json([
             'name' => $user->getFirstname(),
@@ -32,7 +35,7 @@ class AuthenticationController extends AbstractController
     }
 
     /**
-     * @Route("/register", methods={"POST"})
+     * @Route("/v1/register", methods={"POST"}, name="app_v1_register")
      */
     public function register(EntityManagerInterface $entityManager, UserRepository $userRepository, UserPasswordEncoderInterface $passwordEncoder, array $jsonData): Response
     {

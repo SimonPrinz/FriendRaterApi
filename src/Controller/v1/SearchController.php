@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\v1;
 
 use App\Entity\User;
 use App\Subscribers\ApiException;
@@ -17,7 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class SearchController extends AbstractController
 {
     /**
-     * @Route("/search", methods={"GET"})
+     * @Route("/v1/search", methods={"GET"}, name="app_v1_search")
      */
     public function search(Request $request, EntityManagerInterface $entityManager, User $user): Response
     {
@@ -55,7 +55,7 @@ class SearchController extends AbstractController
     }
 
     /**
-     * @Route("/numbersearch", methods={"POST"})
+     * @Route("/v1/numbersearch", methods={"POST"}, name="app_v1_numbersearch")
      */
     public function numberSearch(array $jsonData, EntityManagerInterface $entityManager, User $user): Response
     {

@@ -11,6 +11,7 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
+            request_matcher: App\Security\RequestMatcher
             anonymous: true
             lazy: true
             provider: basic_provider
@@ -18,7 +19,3 @@ security:
             guard:
                 authenticators:
                     - App\Security\Authenticator
-
-    access_control:
-        - { path: ^/(login|register)$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/, roles: ROLE_USER }

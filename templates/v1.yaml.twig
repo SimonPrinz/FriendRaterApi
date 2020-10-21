@@ -1,0 +1,206 @@
+openapi: 3.0.0
+info:
+    version: 1.0.0
+    title: FriendRaterApi
+    contact:
+        email: Hello@SimonPrinz.me
+tags:
+    - name: Authentication
+      description: Login and Registration
+    - name: Search
+      description: Search for users
+security:
+    - basicAuth: []
+paths:
+    /login:
+        get:
+            tags:
+                - Authentication
+            summary: Checks the credentials of the user against the database
+            description: 'Only needs the "Authorization: Basic xyz" header'
+            operationId: login
+            responses:
+                200:
+                    description: Ok
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/LoginResponse'
+                401:
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ApiErrorResponse'
+    /register:
+        post:
+            tags:
+                - Authentication
+            summary: Creates a new user account
+            description: |
+            operationId: register
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/RegisterRequest'
+            responses:
+                201:
+                    description: Created
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/SuccessResponse'
+                400:
+                    description: Bad request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ApiErrorResponse'
+                401:
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ApiErrorResponse'
+    /search:
+        get:
+            tags:
+                - Search
+            summary: Searches for users by username, name and email
+            description: |
+            operationId: search
+            parameters:
+                - in: query
+                  name: q
+                  description: Search parameter
+                  schema:
+                      type: string
+                      minLength: 3
+                  required: true
+            responses:
+                200:
+                    description: Ok
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/SearchResponse'
+                401:
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ApiErrorResponse'
+    /numbersearch:
+        post:
+            tags:
+                - Search
+            summary: Searches for users by phone number
+            description: |
+            operationId: numbersearch
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: array
+                            items:
+                                type: string
+                                example: '+49123456789'
+            responses:
+                200:
+                    description: Ok
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/SearchResponse'
+                401:
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ApiErrorResponse'
+servers:
+    - url: {{ baseUrl }}
+components:
+    securitySchemes:
+        basicAuth:
+            type: http
+            scheme: basic
+    schemas:
+        LoginResponse:
+            type: object
+            properties:
+                ok:
+                    type: boolean
+                data:
+                    type: object
+                    properties:
+                        name:
+                            type: string
+        RegisterRequest:
+            type: object
+            properties:
+                username:
+                    type: string
+                    required: true
+                    minLength: 3
+                    maxLength: 16
+                password:
+                    type: string
+                    required: true
+                    minLength: 8
+                    format: password
+                email:
+                    type: string
+                    required: true
+                    example: hello@example.com
+                    format: email
+                firstname:
+                    type: string
+                    required: true
+                lastname:
+                    type: string
+                    required: true
+                phoneNumber:
+                    type: string
+                    example: '+49123456789'
+        SearchResponse:
+            type: object
+            properties:
+                ok:
+                    type: boolean
+                data:
+                    type: array
+                    items:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: 00000000-0000-0000-0000-000000000000
+                            username:
+                                type: string
+                            name:
+                                type: string
+        SuccessResponse:
+            type: object
+            properties:
+                ok:
+                    type: boolean
+                data:
+                    type: boolean
+        ApiErrorResponse:
+            type: object
+            properties:
+                ok:
+                    type: boolean
+                    default: false
+                errors:
+                    type: array
+                    items:
+                        type: object
+                        properties:
+                            code:
+                                type: integer
+                            message:
+                                type: string
