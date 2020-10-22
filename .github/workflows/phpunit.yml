@@ -15,5 +15,7 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-suggest
       - name: create database
         run: php bin/console doctrine:database:create
+      - name: test
+        run: php bin/console doctrine:query:sql 'show tables'
       - name: PHPUnit
         uses: chindit/actions-phpunit-symfony@master
