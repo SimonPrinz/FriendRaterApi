@@ -85,7 +85,7 @@ class AuthenticationController extends AbstractController
             $entityManager->flush();
             return $this->json(true, 201);
         } catch (Exception $exception) {
-            throw new ApiException([], 503);
+            throw new ApiException([$exception], 503);
         }
     }
 
