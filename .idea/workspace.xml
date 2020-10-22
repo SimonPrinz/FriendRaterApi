@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c341b0b-5abb-46f9-a0a9-baef17568126" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FriendRaterApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FriendRaterApi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/v1/AuthenticationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/v1/AuthenticationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,6 +135,10 @@
       <path value="$PROJECT_DIR$/vendor/twig/markdown-extra" />
       <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
       <path value="$PROJECT_DIR$/vendor/league/html-to-markdown" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
     </include_path>
   </component>
   <component name="ProjectId" id="1j4rhtOigN7qMc8bRiq74a2DhFb" />
@@ -177,7 +188,7 @@
       <workItem from="1603074330205" duration="343000" />
       <workItem from="1603074685915" duration="19588000" />
       <workItem from="1603243298653" duration="8266000" />
-      <workItem from="1603331321744" duration="8428000" />
+      <workItem from="1603331321744" duration="11995000" />
     </task>
     <task id="LOCAL-00001" summary="add searches">
       <created>1603165640352</created>
@@ -200,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603339086377</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add additional fixes for activation emails">
+      <created>1603341985943</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603341985944</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +228,8 @@
     <MESSAGE value="add searches" />
     <MESSAGE value="added swagger" />
     <MESSAGE value="add activation emails" />
-    <option name="LAST_COMMIT_MESSAGE" value="add activation emails" />
+    <MESSAGE value="add additional fixes for activation emails" />
+    <option name="LAST_COMMIT_MESSAGE" value="add additional fixes for activation emails" />
   </component>
   <component name="WindowStateProjectService">
     <state x="347" y="446" key="#SQL_Dialects" timestamp="1603339022423">
@@ -221,18 +240,22 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="560" y="275" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603336651440" />
+    <state x="692" y="418" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603343233401">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="692" y="418" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1920.1175@0.25.1920.1175" timestamp="1603343233401" />
     <state x="765" y="298" key="#com.intellij.ide.util.MemberChooser" timestamp="1603337423395">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="765" y="298" key="#com.intellij.ide.util.MemberChooser/0.25.1920.1175@0.25.1920.1175" timestamp="1603337423395" />
-    <state x="729" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603334174899">
+    <state x="729" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603343716069">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="729" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603334174899" />
-    <state x="544" y="185" key="CommitChangelistDialog2" timestamp="1603339086021">
+    <state x="729" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603343716069" />
+    <state x="544" y="185" key="CommitChangelistDialog2" timestamp="1603341985809">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="544" y="185" key="CommitChangelistDialog2/0.25.1920.1175@0.25.1920.1175" timestamp="1603339086021" />
+    <state x="544" y="185" key="CommitChangelistDialog2/0.25.1920.1175@0.25.1920.1175" timestamp="1603341985809" />
     <state width="1294" height="327" key="GridCell.Tab.0.bottom" timestamp="1603337911355">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
@@ -249,10 +272,10 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1294" height="327" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1603337911355" />
-    <state x="694" y="342" key="NewPhpClassDialog" timestamp="1603337452439">
+    <state x="694" y="342" key="NewPhpClassDialog" timestamp="1603343698186">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="694" y="342" key="NewPhpClassDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603337452439" />
+    <state x="694" y="342" key="NewPhpClassDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603343698186" />
     <state x="743" y="318" key="RollbackChangesDialog" timestamp="1603243971727">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
@@ -265,10 +288,10 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="99" y="125" width="1720" height="975" key="VCS.FileHistoryDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603339519503" />
-    <state x="560" y="349" key="Vcs.Push.Dialog.v2" timestamp="1603339104515">
+    <state x="560" y="349" key="Vcs.Push.Dialog.v2" timestamp="1603341989484">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="560" y="349" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1603339104515" />
+    <state x="560" y="349" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1603341989484" />
     <state x="826" y="446" width="342" height="332" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1603334121630">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
