@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
@@ -175,6 +176,27 @@ class User implements UserInterface
 
     //endregion
 
+    //region activateUntil: ?DateTime
+
+    /**
+     * @var DateTime|null
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $activateUntil;
+
+    public function setActivateUntil(?DateTime $activateUntil): self
+    {
+        $this->activateUntil = $activateUntil;
+        return $this;
+    }
+
+    public function getActivateUntil(): ?DateTime
+    {
+        return $this->activateUntil;
+    }
+
+    //endregion
+
     //region UserInterface
 
     public function getRoles(): array
@@ -195,5 +217,6 @@ class User implements UserInterface
     public function __construct()
     {
         $this->id = Uuid::uuid1();
+        $this->activateUntil = false;
     }
 }

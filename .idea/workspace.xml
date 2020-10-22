@@ -4,23 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c341b0b-5abb-46f9-a0a9-baef17568126" name="Default Changelist" comment="added swagger">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/v1/DocumentationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/v1/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/RequestMatcher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/docs.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/v1.yaml.twig" afterDir="false" />
+    <list default="true" id="0c341b0b-5abb-46f9-a0a9-baef17568126" name="Default Changelist" comment="add activation emails">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/mailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201022023733.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Subscribers/DeleteExpiredUsersSubscriber.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Subscribers/EmailSubscriber.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/emails/signup.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/emails/signup.txt.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/v1/activate.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/FriendRaterApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FriendRaterApi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1fb9be7-0efd-41a4-8b97-d6d59345f3a4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1fb9be7-0efd-41a4-8b97-d6d59345f3a4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AuthenticationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/v1/AuthenticationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/v1/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/v1/AuthenticationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/v1/AuthenticationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/v1/DocumentationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/v1/DocumentationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Subscribers/ApiResponseSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subscribers/ApiResponseSubscriber.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/v1.yaml.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/v1/api.yaml.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +142,12 @@
       <path value="$PROJECT_DIR$/vendor/symfony/asset" />
       <path value="$PROJECT_DIR$/vendor/symfony/mime" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/twig/markdown-extra" />
+      <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/league/html-to-markdown" />
     </include_path>
   </component>
   <component name="ProjectId" id="1j4rhtOigN7qMc8bRiq74a2DhFb" />
@@ -151,24 +164,26 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/emails" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="swagger" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Controller/v1" />
-      <recent name="$PROJECT_DIR$/src/Controller/" />
-      <recent name="$PROJECT_DIR$/src/Entity" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/emails" />
       <recent name="$PROJECT_DIR$/src/Controller" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/DBAL/Types" />
       <recent name="$PROJECT_DIR$/src/Repository" />
-      <recent name="$PROJECT_DIR$/src/App/Entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/v1" />
+      <recent name="$PROJECT_DIR$/src/Controller/v1" />
+      <recent name="$PROJECT_DIR$/src/Controller/" />
+      <recent name="$PROJECT_DIR$/src/Entity" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -181,7 +196,8 @@
       <updated>1603074328708</updated>
       <workItem from="1603074330205" duration="343000" />
       <workItem from="1603074685915" duration="19588000" />
-      <workItem from="1603243298653" duration="6441000" />
+      <workItem from="1603243298653" duration="8266000" />
+      <workItem from="1603331321744" duration="7291000" />
     </task>
     <task id="LOCAL-00001" summary="add searches">
       <created>1603165640352</created>
@@ -190,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603165640352</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added swagger">
+      <created>1603249788273</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603249788273</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,52 +222,77 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add searches" />
     <MESSAGE value="added swagger" />
-    <option name="LAST_COMMIT_MESSAGE" value="added swagger" />
+    <MESSAGE value="add activation emails" />
+    <option name="LAST_COMMIT_MESSAGE" value="add activation emails" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="275" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603163938865">
+    <state x="347" y="446" key="#SQL_Dialects" timestamp="1603339022423">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="560" y="275" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603163938865" />
-    <state x="765" y="298" key="#com.intellij.ide.util.MemberChooser" timestamp="1603245356716">
+    <state x="347" y="446" key="#SQL_Dialects/0.25.1920.1175@0.25.1920.1175" timestamp="1603339022423" />
+    <state x="560" y="275" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603336651440">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="765" y="298" key="#com.intellij.ide.util.MemberChooser/0.25.1920.1175@0.25.1920.1175" timestamp="1603245356716" />
-    <state x="729" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603160669418">
+    <state x="560" y="275" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603336651440" />
+    <state x="765" y="298" key="#com.intellij.ide.util.MemberChooser" timestamp="1603337423395">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="729" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603160669418" />
-    <state x="544" y="185" key="CommitChangelistDialog2" timestamp="1603249754576">
+    <state x="765" y="298" key="#com.intellij.ide.util.MemberChooser/0.25.1920.1175@0.25.1920.1175" timestamp="1603337423395" />
+    <state x="729" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603334174899">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="544" y="185" key="CommitChangelistDialog2/0.25.1920.1175@0.25.1920.1175" timestamp="1603249754576" />
-    <state x="694" y="342" key="NewPhpClassDialog" timestamp="1603245260761">
+    <state x="729" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603334174899" />
+    <state x="544" y="185" key="CommitChangelistDialog2" timestamp="1603339071893">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="694" y="342" key="NewPhpClassDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603245260761" />
+    <state x="544" y="185" key="CommitChangelistDialog2/0.25.1920.1175@0.25.1920.1175" timestamp="1603339071893" />
+    <state width="1294" height="327" key="GridCell.Tab.0.bottom" timestamp="1603337911355">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state width="1294" height="327" key="GridCell.Tab.0.bottom/0.25.1920.1175@0.25.1920.1175" timestamp="1603337911355" />
+    <state width="1294" height="327" key="GridCell.Tab.0.center" timestamp="1603337911355">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state width="1294" height="327" key="GridCell.Tab.0.center/0.25.1920.1175@0.25.1920.1175" timestamp="1603337911355" />
+    <state width="1294" height="327" key="GridCell.Tab.0.left" timestamp="1603337911354">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state width="1294" height="327" key="GridCell.Tab.0.left/0.25.1920.1175@0.25.1920.1175" timestamp="1603337911354" />
+    <state width="1294" height="327" key="GridCell.Tab.0.right" timestamp="1603337911355">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state width="1294" height="327" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1603337911355" />
+    <state x="694" y="342" key="NewPhpClassDialog" timestamp="1603337452439">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="694" y="342" key="NewPhpClassDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603337452439" />
     <state x="743" y="318" key="RollbackChangesDialog" timestamp="1603243971727">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="743" y="318" key="RollbackChangesDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603243971727" />
-    <state x="469" y="248" key="SettingsEditor" timestamp="1603246346233">
+    <state x="469" y="248" key="SettingsEditor" timestamp="1603334901111">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="469" y="248" key="SettingsEditor/0.25.1920.1175@0.25.1920.1175" timestamp="1603246346233" />
-    <state x="560" y="349" key="Vcs.Push.Dialog.v2" timestamp="1603165653587">
+    <state x="469" y="248" key="SettingsEditor/0.25.1920.1175@0.25.1920.1175" timestamp="1603334901111" />
+    <state x="560" y="349" key="Vcs.Push.Dialog.v2" timestamp="1603249819222">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="560" y="349" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1603165653587" />
-    <state x="826" y="446" width="342" height="332" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1603076295280">
+    <state x="560" y="349" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1603249819222" />
+    <state x="826" y="446" width="342" height="332" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1603334121630">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="826" y="446" width="342" height="332" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.25.1920.1175@0.25.1920.1175" timestamp="1603076295280" />
-    <state x="661" y="367" width="688" height="490" key="find.popup" timestamp="1603161900227">
+    <state x="826" y="446" width="342" height="332" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.25.1920.1175@0.25.1920.1175" timestamp="1603334121630" />
+    <state x="805" y="390" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1603334116110">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="661" y="367" width="688" height="490" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1603161900227" />
-    <state x="625" y="289" width="670" height="676" key="search.everywhere.popup" timestamp="1603246355603">
+    <state x="805" y="390" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603334116110" />
+    <state x="661" y="367" width="688" height="490" key="find.popup" timestamp="1603338179709">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="625" y="289" width="670" height="676" key="search.everywhere.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1603246355603" />
+    <state x="661" y="367" width="688" height="490" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1603338179709" />
+    <state x="625" y="289" width="670" height="676" key="search.everywhere.popup" timestamp="1603334862336">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="625" y="289" width="670" height="676" key="search.everywhere.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1603334862336" />
   </component>
 </project>

@@ -19,12 +19,12 @@ class ApiResponseSubscriber implements EventSubscriberInterface
         ];
     }
 
-    /** @var ParameterBagInterface */
-    private $parameterBag;
+    /** @var bool */
+    private $dev;
 
     public function __construct(ParameterBagInterface $parameterBag)
     {
-        $this->parameterBag = $parameterBag;
+        $this->dev = $parameterBag->get('kernel.environment') !== 'prod';
     }
 
     public function onKernelException(ExceptionEvent $event)
@@ -36,6 +36,7 @@ class ApiResponseSubscriber implements EventSubscriberInterface
                 [
                     'code' => $exception->getCode(),
                     'message' => $exception->getMessage(),
+                    'details' => $this->dev ? $exception->getTraceAsString() : null,
                 ],
             ], 500);
             $event->setResponse($response);
@@ -48,6 +49,7 @@ class ApiResponseSubscriber implements EventSubscriberInterface
             return [
                 'code' => $e->getCode(),
                 'message' => $e->getMessage(),
+                'details' => $this->dev ? $e->getTraceAsString() : null,
             ];
         }, $exception->getErrors()), $exception->getCode());
         $event->setResponse($response);

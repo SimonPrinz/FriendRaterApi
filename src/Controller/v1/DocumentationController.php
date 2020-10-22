@@ -24,7 +24,7 @@ class DocumentationController extends AbstractController
      */
     public function docsYaml(UrlGeneratorInterface $urlGenerator): Response
     {
-        return $this->render('v1.yaml.twig', [
+        return $this->render('v1/api.yaml.twig', [
             'baseUrl' => $urlGenerator->generate('app_v1_base', [], UrlGeneratorInterface::ABSOLUTE_URL),
         ]);
     }

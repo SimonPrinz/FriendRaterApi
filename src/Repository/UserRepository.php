@@ -32,6 +32,7 @@ class UserRepository extends ServiceEntityRepository
             ->where('user.username = :value')
             ->orWhere('user.email = :value')
             ->orWhere('user.phoneNumber = :value')
+            ->andWhere('user.activateUntil = null')
             ->setParameter('value', $usernameOrEmailOrPhoneNumber)
             ->getQuery()->getOneOrNullResult();
     }
