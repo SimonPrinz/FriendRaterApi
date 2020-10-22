@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: test
-        run: service start mysql
+        run: service mysql start
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
       - name: PHPUnit
