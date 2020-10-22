@@ -27,5 +27,10 @@ services:
         resource: '../src/Controller/'
         tags: ['controller.service_arguments']
 
+    App\Controller\Resolver\:
+        resource: '../src/Controller/Resolver/'
+        tags:
+            - { name: controller.argument_value_resolver, priority: 100 }
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

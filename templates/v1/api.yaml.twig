@@ -9,6 +9,8 @@ tags:
       description: Login and Registration
     - name: Search
       description: Search for users
+    - name: Profile
+      description: |
 security:
     - basicAuth: []
 paths:
@@ -157,6 +159,39 @@ paths:
                                 $ref: '#/components/schemas/SearchResponse'
                 401:
                     description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ApiErrorResponse'
+    /profile:
+        get:
+            tags:
+                - Profile
+            summary: Gets the data to display a profile
+            description: |
+            operationId: profile
+            parameters:
+                - in: query
+                  name: id
+                  description: Id of the user or empty for the own
+                  schema:
+                      type: string
+                      default: |
+            responses:
+                200:
+                    description: Ok
+                    content:
+                        application/json:
+                            schema:
+                                type: string
+                404:
+                    description: User not found
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ApiErrorResponse'
+                500:
+                    description: Server error
                     content:
                         application/json:
                             schema:

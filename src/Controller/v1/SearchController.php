@@ -13,14 +13,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 class SearchController extends AbstractController
 {
     /**
      * @Route("/v1/search", methods={"GET"}, name="app_v1_search")
      */
-    public function search(Request $request, EntityManagerInterface $entityManager, User $user): Response
+    public function search(Request $request, EntityManagerInterface $entityManager, UserInterface $user): Response
     {
+        /** @var User $user */
+
         if (!$request->query->has('q')) {
             throw new ApiException([new Exception('no query was specified')], 400);
         }
@@ -57,8 +60,10 @@ class SearchController extends AbstractController
     /**
      * @Route("/v1/numbersearch", methods={"POST"}, name="app_v1_numbersearch")
      */
-    public function numberSearch(array $jsonData, EntityManagerInterface $entityManager, User $user): Response
+    public function numberSearch(array $jsonData, EntityManagerInterface $entityManager, UserInterface $user): Response
     {
+        /** @var User $user */
+
         if (!is_array($jsonData)) {
             throw new ApiException([new Exception('post data needs to be json array')], 400);
         }

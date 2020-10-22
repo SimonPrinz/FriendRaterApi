@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Resolver;
 
+use Exception;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Controller\ArgumentValueResolverInterface;
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
@@ -21,7 +22,7 @@ class JsonDataArgumentResolver implements ArgumentValueResolverInterface
         try {
             $content = $request->getContent();
             return [json_decode($content, true)];
-        } catch (\Exception $exception) {
+        } catch (Exception $exception) {
             return null;
         }
     }

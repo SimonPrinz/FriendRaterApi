@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c341b0b-5abb-46f9-a0a9-baef17568126" name="Default Changelist" comment="add dates to entities">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201022065217.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/AbstractEntity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1fb9be7-0efd-41a4-8b97-d6d59345f3a4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1fb9be7-0efd-41a4-8b97-d6d59345f3a4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+    <list default="true" id="0c341b0b-5abb-46f9-a0a9-baef17568126" name="Default Changelist" comment="add profile view">
+      <change afterPath="$PROJECT_DIR$/src/Controller/Resolver/UuidArgumentResolver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/v1/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/UserComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/UserComment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/UserCommentRating.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/UserCommentRating.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/UserRating.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/UserRating.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/JsonDataArgumentResolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Resolver/JsonDataArgumentResolver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserArgumentResolver.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/v1/AuthenticationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/v1/AuthenticationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/v1/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/v1/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/docs.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/docs.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/v1/api.yaml.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/v1/api.yaml.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +161,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/emails" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -168,13 +169,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/emails" />
       <recent name="$PROJECT_DIR$/src/Controller" />
+      <recent name="$PROJECT_DIR$/templates/emails" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/DBAL/Types" />
       <recent name="$PROJECT_DIR$/src/Repository" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Controller/Resolver" />
       <recent name="$PROJECT_DIR$/templates/v1" />
       <recent name="$PROJECT_DIR$/src/Controller/v1" />
       <recent name="$PROJECT_DIR$/src/Controller/" />
@@ -192,7 +194,7 @@
       <workItem from="1603074330205" duration="343000" />
       <workItem from="1603074685915" duration="19588000" />
       <workItem from="1603243298653" duration="8266000" />
-      <workItem from="1603331321744" duration="16019000" />
+      <workItem from="1603331321744" duration="22887000" />
     </task>
     <task id="LOCAL-00001" summary="add searches">
       <created>1603165640352</created>
@@ -236,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603348159303</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add dates to entities">
+      <created>1603349943413</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603349943413</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,17 +259,18 @@
     <MESSAGE value="add phpunit" />
     <MESSAGE value="add datafixtures" />
     <MESSAGE value="add dates to entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dates to entities" />
+    <MESSAGE value="add profile view" />
+    <option name="LAST_COMMIT_MESSAGE" value="add profile view" />
   </component>
   <component name="WindowStateProjectService">
     <state x="347" y="446" key="#SQL_Dialects" timestamp="1603339022423">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="347" y="446" key="#SQL_Dialects/0.25.1920.1175@0.25.1920.1175" timestamp="1603339022423" />
-    <state x="560" y="275" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603336651440">
+    <state x="560" y="275" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603355871428">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="560" y="275" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603336651440" />
+    <state x="560" y="275" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603355871428" />
     <state x="692" y="418" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603343233401">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
@@ -277,30 +287,30 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="697" y="371" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603349038555" />
-    <state x="544" y="185" key="CommitChangelistDialog2" timestamp="1603349909402">
+    <state x="544" y="185" key="CommitChangelistDialog2" timestamp="1603357142944">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="544" y="185" key="CommitChangelistDialog2/0.25.1920.1175@0.25.1920.1175" timestamp="1603349909402" />
-    <state width="1294" height="327" key="GridCell.Tab.0.bottom" timestamp="1603337911355">
+    <state x="544" y="185" key="CommitChangelistDialog2/0.25.1920.1175@0.25.1920.1175" timestamp="1603357142944" />
+    <state width="1294" height="327" key="GridCell.Tab.0.bottom" timestamp="1603357143007">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state width="1294" height="327" key="GridCell.Tab.0.bottom/0.25.1920.1175@0.25.1920.1175" timestamp="1603337911355" />
-    <state width="1294" height="327" key="GridCell.Tab.0.center" timestamp="1603337911355">
+    <state width="1294" height="327" key="GridCell.Tab.0.bottom/0.25.1920.1175@0.25.1920.1175" timestamp="1603357143007" />
+    <state width="1294" height="327" key="GridCell.Tab.0.center" timestamp="1603357143006">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state width="1294" height="327" key="GridCell.Tab.0.center/0.25.1920.1175@0.25.1920.1175" timestamp="1603337911355" />
-    <state width="1294" height="327" key="GridCell.Tab.0.left" timestamp="1603337911354">
+    <state width="1294" height="327" key="GridCell.Tab.0.center/0.25.1920.1175@0.25.1920.1175" timestamp="1603357143006" />
+    <state width="1294" height="327" key="GridCell.Tab.0.left" timestamp="1603357143006">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state width="1294" height="327" key="GridCell.Tab.0.left/0.25.1920.1175@0.25.1920.1175" timestamp="1603337911354" />
-    <state width="1294" height="327" key="GridCell.Tab.0.right" timestamp="1603337911355">
+    <state width="1294" height="327" key="GridCell.Tab.0.left/0.25.1920.1175@0.25.1920.1175" timestamp="1603357143006" />
+    <state width="1294" height="327" key="GridCell.Tab.0.right" timestamp="1603357143006">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state width="1294" height="327" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1603337911355" />
-    <state x="694" y="342" key="NewPhpClassDialog" timestamp="1603348716803">
+    <state width="1294" height="327" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1603357143006" />
+    <state x="694" y="342" key="NewPhpClassDialog" timestamp="1603351201564">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="694" y="342" key="NewPhpClassDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603348716803" />
+    <state x="694" y="342" key="NewPhpClassDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603351201564" />
     <state x="743" y="318" key="RollbackChangesDialog" timestamp="1603243971727">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
@@ -313,10 +323,10 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="99" y="125" width="1720" height="975" key="VCS.FileHistoryDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603339519503" />
-    <state x="560" y="349" key="Vcs.Push.Dialog.v2" timestamp="1603348167274">
+    <state x="560" y="349" key="Vcs.Push.Dialog.v2" timestamp="1603349947939">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="560" y="349" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1603348167274" />
+    <state x="560" y="349" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1603349947939" />
     <state x="826" y="446" width="342" height="332" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1603349502897">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
@@ -329,9 +339,9 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="661" y="367" width="688" height="490" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1603338179709" />
-    <state x="625" y="289" width="670" height="676" key="search.everywhere.popup" timestamp="1603347067034">
+    <state x="625" y="289" width="670" height="676" key="search.everywhere.popup" timestamp="1603355484736">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="625" y="289" width="670" height="676" key="search.everywhere.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1603347067034" />
+    <state x="625" y="289" width="670" height="676" key="search.everywhere.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1603355484736" />
   </component>
 </project>

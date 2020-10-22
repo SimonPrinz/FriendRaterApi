@@ -19,17 +19,15 @@ use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use Symfony\Component\Security\Core\Security;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 class AuthenticationController extends AbstractController
 {
     /**
      * @Route("/v1/login", methods={"GET"}, name="app_v1_login")
      */
-    public function login(Security $security): Response
+    public function login(?UserInterface $user): Response
     {
-        /** @var User $user */
-        $user = $security->getUser();
         if ($user == null) {
             throw new ApiException([new Exception('login is required')], 401);
         }
