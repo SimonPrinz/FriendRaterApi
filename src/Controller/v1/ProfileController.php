@@ -3,6 +3,7 @@
 namespace App\Controller\v1;
 
 use App\DBAL\Types\RatingType;
+use App\Entity\UserComment;
 use App\Entity\UserRating;
 use App\Repository\UserRepository;
 use App\Subscribers\ApiException;
@@ -64,5 +65,36 @@ class ProfileController extends AbstractController
                 'like' => $getRatingsForType(RatingType::LIKE),
             ],
         ]);
+    }
+
+    /**
+     * @Route("/v1/comments", methods={"GET"}, name="app_v1_comments")
+     */
+    public function comments(
+        ?UuidInterface $id,
+        EntityManagerInterface $entityManager,
+        UserRepository $userRepository
+    ): Response {
+        $user = $userRepository->findOneBy([
+            'id' => $id,
+        ]);
+        if ($user == null) {
+            throw new ApiException([], 404);
+        }
+
+        $comments = $entityManager->getRepository(UserComment::class)
+            ->findBy([
+                'user' => $user,
+            ]);
+
+        return $this->json(array_map(function($comment) {
+            return [
+                'comment' => $comment->getComment(),
+                'from' => $comment->isAnonymous() ? null : [
+                    'id' => $comment->getAuthor()->getId(),
+                    'name' => $comment->getAuthor()->getFirstname(),
+                ],
+            ];
+        }, $comments));
     }
 }
