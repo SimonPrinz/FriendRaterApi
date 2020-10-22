@@ -3,30 +3,12 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Ramsey\Uuid\Uuid;
-use Ramsey\Uuid\UuidInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserCommentRepository")
  */
-class UserComment
+class UserComment extends AbstractEntity
 {
-    //region id: UuidInterface
-
-    /**
-     * @var UuidInterface
-     * @ORM\Id()
-     * @ORM\Column(type="uuid", unique=true)
-     */
-    private $id;
-
-    public function getId(): UuidInterface
-    {
-        return $this->id;
-    }
-
-    //endregion
-
     //region user: User
 
     /**
@@ -110,9 +92,4 @@ class UserComment
     }
 
     //endregion
-
-    public function __construct()
-    {
-        $this->id = Uuid::uuid1();
-    }
 }

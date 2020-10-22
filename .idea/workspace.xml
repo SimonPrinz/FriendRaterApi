@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c341b0b-5abb-46f9-a0a9-baef17568126" name="Default Changelist" comment="add phpunit">
-      <change beforePath="$PROJECT_DIR$/.idea/FriendRaterApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FriendRaterApi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="0c341b0b-5abb-46f9-a0a9-baef17568126" name="Default Changelist" comment="add dates to entities">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201022065217.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/AbstractEntity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1fb9be7-0efd-41a4-8b97-d6d59345f3a4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1fb9be7-0efd-41a4-8b97-d6d59345f3a4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/UserComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/UserComment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/UserCommentRating.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/UserCommentRating.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/UserRating.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/UserRating.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +192,7 @@
       <workItem from="1603074330205" duration="343000" />
       <workItem from="1603074685915" duration="19588000" />
       <workItem from="1603243298653" duration="8266000" />
-      <workItem from="1603331321744" duration="14180000" />
+      <workItem from="1603331321744" duration="16019000" />
     </task>
     <task id="LOCAL-00001" summary="add searches">
       <created>1603165640352</created>
@@ -228,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603345825084</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add datafixtures">
+      <created>1603348159303</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603348159303</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +248,9 @@
     <MESSAGE value="add activation emails" />
     <MESSAGE value="add additional fixes for activation emails" />
     <MESSAGE value="add phpunit" />
-    <option name="LAST_COMMIT_MESSAGE" value="add phpunit" />
+    <MESSAGE value="add datafixtures" />
+    <MESSAGE value="add dates to entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dates to entities" />
   </component>
   <component name="WindowStateProjectService">
     <state x="347" y="446" key="#SQL_Dialects" timestamp="1603339022423">
@@ -259,18 +269,18 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="765" y="298" key="#com.intellij.ide.util.MemberChooser/0.25.1920.1175@0.25.1920.1175" timestamp="1603346425137" />
-    <state x="729" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603343716069">
+    <state x="729" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603349178122">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="729" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603343716069" />
-    <state x="697" y="371" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603346727312">
+    <state x="729" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603349178122" />
+    <state x="697" y="371" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603349038555">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="697" y="371" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603346727312" />
-    <state x="544" y="185" key="CommitChangelistDialog2" timestamp="1603346783077">
+    <state x="697" y="371" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603349038555" />
+    <state x="544" y="185" key="CommitChangelistDialog2" timestamp="1603349909402">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="544" y="185" key="CommitChangelistDialog2/0.25.1920.1175@0.25.1920.1175" timestamp="1603346783077" />
+    <state x="544" y="185" key="CommitChangelistDialog2/0.25.1920.1175@0.25.1920.1175" timestamp="1603349909402" />
     <state width="1294" height="327" key="GridCell.Tab.0.bottom" timestamp="1603337911355">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
@@ -287,10 +297,10 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1294" height="327" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1603337911355" />
-    <state x="694" y="342" key="NewPhpClassDialog" timestamp="1603346414749">
+    <state x="694" y="342" key="NewPhpClassDialog" timestamp="1603348716803">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="694" y="342" key="NewPhpClassDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603346414749" />
+    <state x="694" y="342" key="NewPhpClassDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603348716803" />
     <state x="743" y="318" key="RollbackChangesDialog" timestamp="1603243971727">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
@@ -303,14 +313,14 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="99" y="125" width="1720" height="975" key="VCS.FileHistoryDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1603339519503" />
-    <state x="560" y="349" key="Vcs.Push.Dialog.v2" timestamp="1603345829035">
+    <state x="560" y="349" key="Vcs.Push.Dialog.v2" timestamp="1603348167274">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="560" y="349" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1603345829035" />
-    <state x="826" y="446" width="342" height="332" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1603334121630">
+    <state x="560" y="349" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1603348167274" />
+    <state x="826" y="446" width="342" height="332" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1603349502897">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="826" y="446" width="342" height="332" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.25.1920.1175@0.25.1920.1175" timestamp="1603334121630" />
+    <state x="826" y="446" width="342" height="332" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.25.1920.1175@0.25.1920.1175" timestamp="1603349502897" />
     <state x="805" y="390" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1603334116110">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>

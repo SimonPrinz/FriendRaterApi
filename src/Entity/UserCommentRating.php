@@ -4,30 +4,12 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Fresh\DoctrineEnumBundle\Validator\Constraints\Enum;
-use Ramsey\Uuid\Uuid;
-use Ramsey\Uuid\UuidInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserCommentRatingRepository")
  */
-class UserCommentRating
+class UserCommentRating extends AbstractEntity
 {
-    //region id: UuidInterface
-
-    /**
-     * @var UuidInterface
-     * @ORM\Id()
-     * @ORM\Column(type="uuid", unique=true)
-     */
-    private $id;
-
-    public function getId(): UuidInterface
-    {
-        return $this->id;
-    }
-
-    //endregion
-
     //region userComment: UserComment
 
     /**
@@ -91,9 +73,4 @@ class UserCommentRating
     }
 
     //endregion
-
-    public function __construct()
-    {
-        $this->id = Uuid::uuid1();
-    }
 }

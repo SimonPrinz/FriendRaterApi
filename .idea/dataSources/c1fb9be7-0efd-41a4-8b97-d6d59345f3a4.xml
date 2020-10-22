@@ -837,146 +837,182 @@ SELECT|sys.sys_config:null
       <Position>9</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <index id="254" parent="237" name="UNIQ_8D93D649F85E0677">
+    <column id="254" parent="237" name="created_at">
+      <Position>10</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="255" parent="237" name="updated_at">
+      <Position>11</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <index id="256" parent="237" name="UNIQ_8D93D649F85E0677">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="255" parent="237" name="PRIMARY">
+    <key id="257" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="256" parent="237" name="UNIQ_8D93D649F85E0677">
+    <key id="258" parent="237" name="UNIQ_8D93D649F85E0677">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>UNIQ_8D93D649F85E0677</UnderlyingIndexName>
     </key>
-    <column id="257" parent="238" name="id">
+    <column id="259" parent="238" name="id">
       <Position>1</Position>
       <DataType>binary(16)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="258" parent="238" name="user_id">
+    <column id="260" parent="238" name="user_id">
       <Position>2</Position>
       <DataType>binary(16)|0s</DataType>
     </column>
-    <column id="259" parent="238" name="author_id">
+    <column id="261" parent="238" name="author_id">
       <Position>3</Position>
       <DataType>binary(16)|0s</DataType>
     </column>
-    <column id="260" parent="238" name="is_anonymous">
+    <column id="262" parent="238" name="is_anonymous">
       <Position>4</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="261" parent="238" name="comment">
+    <column id="263" parent="238" name="comment">
       <Position>5</Position>
       <DataType>varchar(2048)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="262" parent="238" name="IDX_CC794C66A76ED395">
+    <column id="264" parent="238" name="created_at">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="265" parent="238" name="updated_at">
+      <Position>7</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <index id="266" parent="238" name="IDX_CC794C66A76ED395">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="263" parent="238" name="IDX_CC794C66F675F31B">
+    <index id="267" parent="238" name="IDX_CC794C66F675F31B">
       <ColNames>author_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="264" parent="238" name="PRIMARY">
+    <key id="268" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="265" parent="238" name="FK_CC794C66A76ED395">
+    <foreign-key id="269" parent="238" name="FK_CC794C66A76ED395">
       <ColNames>user_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="266" parent="238" name="FK_CC794C66F675F31B">
+    <foreign-key id="270" parent="238" name="FK_CC794C66F675F31B">
       <ColNames>author_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="267" parent="239" name="id">
+    <column id="271" parent="239" name="id">
       <Position>1</Position>
       <DataType>binary(16)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="268" parent="239" name="user_comment_id">
+    <column id="272" parent="239" name="user_comment_id">
       <Position>2</Position>
       <DataType>binary(16)|0s</DataType>
     </column>
-    <column id="269" parent="239" name="author_id">
+    <column id="273" parent="239" name="author_id">
       <Position>3</Position>
       <DataType>binary(16)|0s</DataType>
     </column>
-    <column id="270" parent="239" name="type">
+    <column id="274" parent="239" name="type">
       <Position>4</Position>
       <Comment>(DC2Type:RatingType)</Comment>
       <DataType>enum(&apos;0&apos;, &apos;1&apos;, &apos;2&apos;)|0e</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="271" parent="239" name="IDX_791FA1695F0EBBFF">
+    <column id="275" parent="239" name="created_at">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="276" parent="239" name="updated_at">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <index id="277" parent="239" name="IDX_791FA1695F0EBBFF">
       <ColNames>user_comment_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="272" parent="239" name="IDX_791FA169F675F31B">
+    <index id="278" parent="239" name="IDX_791FA169F675F31B">
       <ColNames>author_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="273" parent="239" name="PRIMARY">
+    <key id="279" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="274" parent="239" name="FK_791FA1695F0EBBFF">
+    <foreign-key id="280" parent="239" name="FK_791FA1695F0EBBFF">
       <ColNames>user_comment_id</ColNames>
       <RefTableName>user_comment</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="275" parent="239" name="FK_791FA169F675F31B">
+    <foreign-key id="281" parent="239" name="FK_791FA169F675F31B">
       <ColNames>author_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="276" parent="240" name="id">
+    <column id="282" parent="240" name="id">
       <Position>1</Position>
       <DataType>binary(16)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="277" parent="240" name="user_id">
+    <column id="283" parent="240" name="user_id">
       <Position>2</Position>
       <DataType>binary(16)|0s</DataType>
     </column>
-    <column id="278" parent="240" name="author_id">
+    <column id="284" parent="240" name="author_id">
       <Position>3</Position>
       <DataType>binary(16)|0s</DataType>
     </column>
-    <column id="279" parent="240" name="type">
+    <column id="285" parent="240" name="type">
       <Position>4</Position>
       <Comment>(DC2Type:RatingType)</Comment>
       <DataType>enum(&apos;0&apos;, &apos;1&apos;, &apos;2&apos;)|0e</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="280" parent="240" name="IDX_BDDB3D1FA76ED395">
+    <column id="286" parent="240" name="created_at">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="287" parent="240" name="updated_at">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <index id="288" parent="240" name="IDX_BDDB3D1FA76ED395">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="281" parent="240" name="IDX_BDDB3D1FF675F31B">
+    <index id="289" parent="240" name="IDX_BDDB3D1FF675F31B">
       <ColNames>author_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="282" parent="240" name="PRIMARY">
+    <key id="290" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="283" parent="240" name="FK_BDDB3D1FA76ED395">
+    <foreign-key id="291" parent="240" name="FK_BDDB3D1FA76ED395">
       <ColNames>user_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="284" parent="240" name="FK_BDDB3D1FF675F31B">
+    <foreign-key id="292" parent="240" name="FK_BDDB3D1FF675F31B">
       <ColNames>author_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>

@@ -4,31 +4,13 @@ namespace App\Entity;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
-use Ramsey\Uuid\Uuid;
-use Ramsey\Uuid\UuidInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
-class User implements UserInterface
+class User extends AbstractEntity implements UserInterface
 {
-    //region id: UuidInterface
-
-    /**
-     * @var UuidInterface
-     * @ORM\Id()
-     * @ORM\Column(type="uuid", unique=true)
-     */
-    private $id;
-
-    public function getId(): UuidInterface
-    {
-        return $this->id;
-    }
-
-    //endregion
-
     //region username: string
 
     /**
@@ -213,9 +195,4 @@ class User implements UserInterface
     {}
 
     //endregion
-
-    public function __construct()
-    {
-        $this->id = Uuid::uuid1();
-    }
 }
