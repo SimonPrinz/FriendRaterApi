@@ -9,9 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: test
+      - name: start mysql
         run: sudo service mysql start
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
+      - name: create database
+        run: php bin/console doctrine:schema:create
       - name: PHPUnit
         uses: chindit/actions-phpunit-symfony@master
