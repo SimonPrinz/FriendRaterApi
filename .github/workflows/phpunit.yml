@@ -14,6 +14,6 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
       - name: create database
-        run: php bin/console doctrine:schema:create
+        run: php bin/console doctrine:database:create
       - name: PHPUnit
         uses: chindit/actions-phpunit-symfony@master
