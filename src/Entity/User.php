@@ -217,6 +217,5 @@ class User implements UserInterface
     public function __construct()
     {
         $this->id = Uuid::uuid1();
-        $this->activateUntil = false;
     }
 }
