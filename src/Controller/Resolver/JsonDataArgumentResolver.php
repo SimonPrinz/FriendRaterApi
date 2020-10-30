@@ -12,7 +12,7 @@ class JsonDataArgumentResolver implements ArgumentValueResolverInterface
     public function supports(Request $request, ArgumentMetadata $argument)
     {
         return !in_array($request->getMethod(), ['GET', 'HEAD', 'OPTIONS']) &&
-            strtolower($request->headers->get('Content-Type')) === 'application/json' &&
+            strpos(strtolower($request->headers->get('Content-Type')), 'application/json') === 0 &&
             $argument->getType() == 'array' &&
             strtolower($argument->getName()) === 'jsondata';
     }
